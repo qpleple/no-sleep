@@ -1,6 +1,14 @@
+<p align="center">
+  <img src="docs/logo.png" width="128" alt="NoSleep icon">
+</p>
+
 # NoSleep
 
 A minimal macOS menu bar app that keeps your Mac awake. One icon, three states, cycled with a left click:
+
+<p align="center">
+  <img src="docs/states.png" width="420" alt="The three states in the menu bar: white, yellow, red">
+</p>
 
 | Icon   | State     | Effect |
 |--------|-----------|--------|
@@ -43,6 +51,7 @@ If the app is killed while red, it detects `SleepDisabled 1` on next launch and 
 - `Sources/NoSleep/main.swift` — the whole app, a single file, no Xcode project
 - `make-icon.swift` — renders the app icon from the same SF Symbol
 - `build.sh` — builds the Swift package and assembles `NoSleep.app`
+- `docs/make-images.swift` — renders the README images
 
 ## License
 
