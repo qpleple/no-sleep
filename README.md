@@ -35,6 +35,8 @@ Add it to System Settings › General › Login Items to start it at login.
 - **Yellow** holds an IOKit power assertion (`PreventUserIdleSystemSleep`). The display may still dim.
 - **Red** runs `pmset -a disablesleep 1`, the only supported way to keep a MacBook awake with the lid closed. It needs root, so macOS asks for your administrator password when entering or leaving red. Sleep is re-enabled when you switch state or quit.
 
+In both states only *system* sleep is blocked: the display still turns off and the lock screen still appears, automatically or manually. Locking never stops your apps, so everything keeps running behind the lock screen.
+
 To skip the password prompt, allow exactly those two commands without a password:
 
 ```bash
