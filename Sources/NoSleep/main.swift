@@ -132,8 +132,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     // MARK: - pmset (needs root)
 
-    /// Tries passwordless sudo first (see README for the sudoers rule), then falls back
-    /// to the standard macOS administrator password prompt.
+    /// Tries passwordless sudo first (only works if a NOPASSWD sudoers rule exists), then
+    /// falls back to the standard macOS administrator password prompt.
     private func setSystemSleepDisabled(_ disabled: Bool) -> Bool {
         let value = disabled ? "1" : "0"
         if run("/usr/bin/sudo", ["-n", "/usr/bin/pmset", "-a", "disablesleep", value]).status == 0 {
